@@ -1,0 +1,10 @@
+stages:
+  - test
+
+before_script:
+  - cpanm --installdeps --notest --local-lib-contained=extlib .
+
+test:
+  stage: test
+  script: prove -Ilib -Iextlib/lib/perl5 -r t
+
