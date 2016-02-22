@@ -83,7 +83,7 @@ $ git push -u origin master
 
 ### CIの確認
 
-プロジェクトのページ(e.g. http://192.168.133.10/myuser/myapp)から`Continuous Integration`を辿り、CIの結果を確認する。
+プロジェクトのページ(e.g. http://192.168.133.10/myuser/myapp )から`Continuous Integration`を辿り、CIの結果を確認する。
 
 e.g.) http://192.168.133.10/ci/projects/1/builds/1
 
