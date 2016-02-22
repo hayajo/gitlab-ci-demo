@@ -32,12 +32,6 @@ GitLabに`myapp`プロジェクトを作成する。
 
 e.g.) http://192.168.133.10/myuser/myapp
 
-### myappプロジェクトでGitLab CIサービスを有効化
-
-プロジェクトのページから Settings > Services > GitLab CI を辿り、GitLab CIを有効にする。
-
-e.g.) http://192.168.133.10/myuser/myapp/services/gitlab_ci/edit
-
 ### GitLab Runnerの設定
 
 GitLab Runnerサーバで下記のコマンドでCIサーバを登録する。
@@ -48,18 +42,24 @@ e.g.) http://192.168.133.10/ci/projects/1/runners
 
 ```
 $ vagrant ssh runner
-Welcome to your Packer-built virtual machine.
+----------------------------------------------------------------
+  CentOS 7.1.1503                             built 2016-01-08
+----------------------------------------------------------------
 [vagrant@localhost ~]$ sudo gitlab-runner register
-Please enter the gitlab-ci coordinator URL (e.g. http://gitlab-ci.org:3000/):
+Running in system-mode.
+
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/ci):
 http://192.168.133.10/ci
 Please enter the gitlab-ci token for this runner:
 ea0aeb7b24bdb177953d4226f4028e
 Please enter the gitlab-ci description for this runner:
 [localhost.localdomain]: ci-runner-01
-INFO[0053] ea0aeb7b Registering runner... succeeded
-Please enter the executor: ssh, shell, parallels, docker, docker-ssh:
-[shell]:
-INFO[0059] Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+Please enter the gitlab-ci tags for this runner (comma separated):
+example,vagrant,perl
+Registering runner... succeeded                     runner=3LMx5gEX
+Please enter the executor: ssh, shell, parallels, docker, docker-ssh, virtualbox:
+shell
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
 [vagrant@localhost ~]$ exit
 ```
 
