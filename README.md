@@ -65,6 +65,8 @@ Runner registered successfully. Feel free to start it, but if it's running alrea
 
 このデモではCI Runnerが動作するサーバでCIを実行するのでexecutoreには`shell`を指定する。
 
+指定したタグは、該当するプロジェクトのRunnersページで確認できる。
+
 ### myappプロジェクトにコードをpush
 
 プロジェクトのルートに`.gitlab-ci.yml`を配置してコードをリポジトリにpushする。
